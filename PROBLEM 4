@@ -1,0 +1,33 @@
+// Create a program that will accept three numbers as input and display the LARGEST number of the three.
+
+#include <iostream>
+#include <cmath>
+#include <conio.h>
+
+using namespace std; 
+
+int main ()
+{
+	int a, b, c;
+	cout << "Enter First Number: ";
+	cin >> a; 
+	
+	cout << "Enter Second Number: ";
+	cin >> b; 
+	
+	cout << "Enter Third Number: ";
+	cin >> c; 
+	cout << "-------------------------------------------------------" << endl;
+	
+		if (a > b && a > c)
+			cout << "The LARGEST of the three numbers is: " << a << endl;
+		else if (b > a && b > c)
+			cout << "The LARGEST of the three numbers is: " << b << endl;
+		else if (c > a && c > a)
+			cout << "The LARGEST of the three numbers is: " << c << endl;
+		else 
+			cout << "You Could Just Guess...\nPlease try again";
+	
+	_getch ();
+	return 0;
+}
