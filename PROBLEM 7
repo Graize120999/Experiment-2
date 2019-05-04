@@ -1,0 +1,31 @@
+// Create a program that will generate the sum of all whole numbers starting from 1 up to a
+// given number. For example, given an input of 5, the summation is 1+2+3+4+5 = 15. Continue asking for
+// input and calculating until the user enters 0 or a negative number.
+
+#include <iostream>
+#include <cmath>
+#include <conio.h>
+
+using namespace std; 
+
+int main ()
+{
+	int num1, sum = 0;
+	b:
+	cout << "\n";
+	cout << "\n";
+	
+	cout << "Please enter a number: ";
+	cin >> num1;
+	
+	for (int i=1; i<=num1; i++)
+	{
+		sum = sum + i;
+	}
+	
+	cout << "The sum of all whole numbers from 1 to " << num1 << " is: " << sum;
+	goto b;
+
+	_getch ();
+	return 0;
+}
