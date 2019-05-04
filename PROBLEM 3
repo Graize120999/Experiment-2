@@ -1,0 +1,58 @@
+// This is a program that accepts two integers x and y from the kbd. Let z =2.5. 
+// Use a constant declaration for z and output V with 10 field width and two decimal places.
+// Use switch statement for selection of x values.
+// V= xyz when x = 1 and 1<y<5
+// V= x + y/z when x= 1 and y>=5
+// V= |(x . y)/z| when x = 2 and y<=5
+// V= x-(sqrt (y+z)) when x = 2 and y>5
+// V = x +y + z for other values of x and y
+
+#include <iostream>
+#include <cmath>
+#include <conio.h>
+
+using namespace std; 
+
+int main ()
+{
+	double v, x, y, z;
+	v = 0;
+	z = 2.5;
+	
+	cout << "Enter Your X Value: ";
+	cin >> x;
+	cout << "\n";
+	
+	cout << "Enter Your Y Value: ";
+	cin >> y;
+	cout << "\n";
+
+		if (x == 1 && y > 1 && y < 5 )
+			{
+			 v = x*y*z;
+			 cout << "V = " << v; 
+			}
+		else if (x == 1 && y >= 5)
+		{
+		v = ((x+y)/z);
+		cout << "\tV = " << v << "\n";
+		}
+	else if (x == 2 && y <= 5)
+		{
+		v = (x-y)/z;
+		cout << "\tV = " << v << "\n";
+		}
+	else if (x ==2 && y > 5)
+		{
+		v = x-(sqrt (y+z));
+		cout << "\tV = " << v << "\n";
+		}
+	else 
+		{
+		v = x+y+z;
+		cout << "\tV = " << v << "\n";
+		}	
+		
+	_getch ();
+	return 0;
+}
