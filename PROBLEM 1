@@ -1,0 +1,46 @@
+//PROBLEM 1: 1. An Internet service provider has 3 different subscription packages for its customers:
+//Package A: For P995/mo 10 hrs of access are provided. Additional hours are P20/hr.
+//Package B: For P1495/mo 20 hrs of access are provided. Additional hours are P10/hr.
+//Package C: For P1995/mo of unlimited access is provided.
+//Write a program that calculates a customer's monthly bill. It should ask which package the customer 
+//has purchased and how many hours were used. It should then display the total amount due.
+
+#include <iostream>
+#include <conio.h>
+
+using namespace std; 
+
+int main()
+{
+	int pck, hrs, total, counter; 
+	
+	cout << "\t\t\t\t ~~ AVAILABLE PACKAGES ~~ \n\n";
+		
+	cout << "[1]Package A: For P995/mo 10 hrs of access are provided. Additional hours are P20/hr." << endl;
+	cout << "[2]Package B: For P1495/mo 20 hrs of access are provided. Additional hours are P10/hr." << endl;
+	cout << "[3]Package C: For P1995/mo of unlimited access is provided. \n\n" << endl;
+	
+	cout << "Please Enter Package: ";
+	cin >> pck;
+	
+	cout << "Enter Hours Used: ";
+	cin >> hrs;
+	cout << "-----------------------------------------------------------------------------------------";
+	cout << "\n";
+	
+		if (pck == 1 && hrs <= 10)
+			cout << "Your Total is: 995 php" << endl;
+		else if (pck == 1 && hrs >= 10)
+			cout << "Your Total is: " << 995 + (20*(hrs-10)) << " php" << endl; 
+		else if (pck == 2 && hrs == 20)
+			cout << "Your Total is: 1,450 php"<< endl;
+		else if (pck == 2 && hrs >= 20)
+			cout << "Your Total is: " << 1450 + (10*(hrs-20)) << " php" << endl;
+		else if (pck == 3)
+			cout << "Your Total is: 1,995 php"<< endl;
+		else 
+			cout << "You Have Entered an Invalid Data...\nPlease try again";
+			
+	_getch ();
+	return 0;
+}
