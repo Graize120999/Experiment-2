@@ -1,0 +1,33 @@
+// The Fibonacci sequence is a sequence which starts with 0 and 1, with subsequent numbers
+// of the sequence (called Fibonacci numbers) being the sum of the previous two. Thus, the first few terms of
+// the sequence are: 0,1,1,2,3,5,8,… Create a program that will output the NEXT 20 Fibonacci 
+// numbers (after 0 and 1) in one line, separated by commas.
+
+#include <iostream>
+#include <cmath>
+#include <conio.h>
+
+using namespace std; 
+
+int main ()
+{
+	int A,B,C,X;
+	
+	A = 0;
+	B = 1;
+	
+
+	cout << "\t\t\t\t~~~The Fibonacci Numbers~~~" << endl;
+	cout << "\n";
+	
+	for (X = 1; X <=21; X++)
+	{
+		cout << C << ", ";
+		C = A + B;
+		A = B;
+		B = C;
+	}
+	
+	_getch ();
+	return 0;
+}
